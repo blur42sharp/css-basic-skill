@@ -1,0 +1,9 @@
+h1 {
+    color: blue;
+    font-size: 12px; /* font-size라고 다 입력하지 않고 fz만 입력하여 약어를 통해 빠르게 구현한다. */
+}
+
+h2 {
+    color: blue;
+    font-size: 12px;
+}
