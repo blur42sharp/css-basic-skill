@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector</title>
+    <link rel="stylesheet" href="../css/09_class_selector.css">
+    <style>
+        /* small 클래스에 폰트 크기 적용
+        .small {
+            font-size: 14px; 폰트 크기를 14px로 설정
+        }
+
+        highlight-color 클래스에 텍스트 색상 적용
+        .highlight-color {
+            color: blue; 텍스트 색상을 파란색으로 설정
+        }
+
+        bold 클래스에 글씨 굵게 설정
+        .bold {
+            font-weight: bold; 글씨를 굵게 설정
+        } */
+    </style>
+</head>
+<body>
+    <!-- small 클래스를 적용한 첫 번째 패러그래프 -->
+    <p class="small">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugit, sed iusto vitae voluptatem expedita dignissimos dolorem dolor officiis provident. Architecto tempore facilis exercitationem nesciunt sapiente cupiditate a totam harum.
+    </p>
+
+    <p>
+        첫 번째로, <code>small</code> 클래스를 사용하여 폰트 크기를 14px로 설정한다. 
+        이 클래스가 적용된 모든 텍스트는 14px로 표시된다.
+    </p>
+
+    <!-- small과 highlight-color 클래스를 적용한 두 번째 패러그래프 -->
+    <p class="small highlight-color">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugit, sed iusto vitae voluptatem expedita dignissimos dolorem dolor officiis provident. Architecto tempore facilis exercitationem nesciunt sapiente cupiditate a totam harum.
+    </p>
+
+    <p>
+        두 번째로, <code>highlight-color</code> 클래스를 사용하여 텍스트 색상을 파란색으로 변경한다. 
+        여러 클래스를 하나의 요소에 적용할 수 있는 점이 특징이다. 
+        예를 들어, <code>small</code>과 <code>highlight-color</code>를 동시에 적용하면 두 스타일이 모두 적용된다.
+    </p>
+
+    <!-- small, highlight-color, bold 클래스를 적용한 세 번째 패러그래프 -->
+    <p class="small highlight-color bold">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam fugit, sed iusto vitae voluptatem expedita dignissimos dolorem dolor officiis provident. Architecto tempore facilis exercitationem nesciunt sapiente cupiditate a totam harum.
+    </p>
+
+    <p>
+        마지막으로, <code>bold</code> 클래스를 사용하여 글씨를 굵게 만든다. 
+        <code>bold</code>가 적용된 요소는 글씨가 굵게 표시된다. 
+        여러 개의 클래스를 조합하여 다양한 스타일을 적용할 수 있다.
+    </p>
+
+    <p>
+        클래스는 여러 개를 동시에 사용할 수 있지만, ID는 하나만 사용해야 한다. 
+        예를 들어, <code>id="logo heading"</code>처럼 공백이 포함된 ID는 오류를 발생시킨다. 
+        하지만 <code>class="small highlight-color"</code>처럼 클래스는 여러 개를 동시에 사용할 수 있다.
+    </p>
+
+    <p>
+        이렇게 <code>class</code>를 사용하면 하나의 요소에 여러 스타일을 적용할 수 있다. 
+        만약 ID로 동일한 스타일을 적용하려면 ID를 개별적으로 설정해야 한다.
+    </p>
+</body>
+</html>

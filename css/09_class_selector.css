@@ -1,0 +1,14 @@
+     /* small 클래스에 폰트 크기 적용 */
+    .small {
+        font-size: 14px; /* 폰트 크기를 14px로 설정 */
+    }
+
+    /* highlight-color 클래스에 텍스트 색상 적용 */
+    .highlight-color {
+        color: blue; /* 텍스트 색상을 파란색으로 설정 */
+    }
+
+    /* bold 클래스에 글씨 굵게 설정 */
+    .bold {
+        font-weight: bold; /* 글씨를 굵게 설정 */
+    }
