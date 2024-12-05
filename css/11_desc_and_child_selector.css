@@ -1,0 +1,17 @@
+/* header h1 {
+    background: silver;
+} */
+
+header .title {
+    background: silver;
+}
+
+/* nav ul li a {
+    background: silver;
+    text-decoration: underline;
+} */
+
+nav > ul > li > a {
+    background: silver;
+    text-decoration: underline;
+}
