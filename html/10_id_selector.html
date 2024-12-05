@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Selector</title>
+    <link rel="stylesheet" href="../css/10_id_selector.css">
+    <style>
+        /* #effect1 {
+            font-size: 14px;
+        }
+
+        #effect2 {
+            font-size: 14px;
+            color: blue;
+        }
+
+        #effect3 {
+            font-size: 14px;
+            color: blue;
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 첫 번째 요소: font-size 속성만 적용 -->
+    <p id="effect1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odio eum repellat iure deleniti, ea impedit, in quam consequuntur eligendi quidem blanditiis autem accusantium nobis, corporis perferendis molestiae unde non.
+    </p>
+    <p>
+        이번에는 id 셀렉터를 사용하여 이전에 09_class_selector.html에서 적용했던 내용을 동일하게 적용하려 한다.
+        p 태그 안의 내용은 모두 14px로 설정해야 한다. 이를 위해 첫 번째 요소effect1에 id #effect1을 사용하여 font-size를 14px로 설정하였다.
+        브라우저 화면에서 확인해보면 첫 번째 요소만 14px로 적용되고, 나머지 요소는 여전히 다른 크기로 표시된다.
+    </p>
+
+    <!-- 두 번째 요소: font-size와 color 속성이 적용 -->
+    <p id="effect2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odio eum repellat iure deleniti, ea impedit, in quam consequuntur eligendi quidem blanditiis autem accusantium nobis, corporis perferendis molestiae unde non.
+    </p>
+    <p>
+        동일하게 두 번째 요소 effect2에도 font-size를 14px로 설정하였다. 추가로 글씨의 색상을 파란색으로 설정하기 위해 color 속성을 blue로 지정하였다.
+        브라우저 화면에서 두 번째 요소가 파란색으로 잘 표시되는 것을 확인할 수 있다.
+    </p>
+
+    <!-- 세 번째 요소: font-size, color, font-weight 속성이 모두 적용 -->
+    <p id="effect3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam odio eum repellat iure deleniti, ea impedit, in quam consequuntur eligendi quidem blanditiis autem accusantium nobis, corporis perferendis molestiae unde non.
+    </p>
+    <p>
+        마지막으로 세 번째 요소effect3는 effect2와 동일하게 적용하였으나 font-weight를 bold로 설정하여 글씨가 굵게 표시되도록 하였다. 이로써 브라우저에서 class 선택자로 적용했던 스타일과 동일한 결과를 id 선택자를 통해 확인할 수 있다.
+    </p>
+
+    <!-- id와 class 선택자 비교 설명 -->
+    <p>
+        추가적으로 id와 class의 차이점을 살펴보자. 만약 클라이언트가 모든 p 태그의 내용을 16px로 변경해달라고 요청한다고 가정해보자.
+        id 선택자를 사용했다면 각각 수정해야 하기 때문에 세 곳의 코드를 모두 수정해야 한다. 하지만 class 선택자를 사용했다면 단 한 곳만 수정하여 모든 요소에 적용할 수 있다.
+    </p>
+
+    <!-- class 선택자 사용의 장점 설명 -->
+    <p>
+        반복적으로 사용될 공통 스타일을 적용할 때는 id보다 class 선택자를 사용하는 것이 바람직하다.
+        class 이름을 적절히 활용하면 효율적이고 유지보수하기 쉬운 CSS를 작성할 수 있다. id 선택자를 과도하게 사용하면 사이트의 유연성이 떨어지고, 유지보수가 어려워질 수 있다.
+    </p>
+
+    <p>
+        다음으로 자손 선택자에 대한 내용을 다루기 위해 11_desc_selector.html에서 확인해보겠다.
+    </p>
+</body>
+</html>
