@@ -1,0 +1,7 @@
+h1 + ul {
+    background-color: silver;
+}
+
+h2 ~ ul {
+    background-color: green;
+}
