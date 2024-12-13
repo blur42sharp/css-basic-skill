@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute - CSS Selector</title> 
+    <link rel="stylesheet" href="../css/13_attribute_selector.css">
+    <style>
+        /* target 속성을 가진 모든 a 태그에 밑줄을 없애는 스타일을 적용 */
+        /* [target] {
+            text-decoration: none;
+        } */
+
+        /* target 속성이 _blank인 a 태그에 배경색을 실버로 적용 */
+        /* [target="_blank"] {
+            background: silver;
+        } */
+
+        /* class 속성이 "inner"로 시작하는 모든 a 태그의 글씨를 두껍게 적용 */
+        /* a[class^="inner"] {
+            font-weight: bold;
+        } */
+
+        /* class 속성이 "inner"로 시작하는 모든 요소들의 글씨를 두껍게 설정 */
+        /* [class^="inner"] {
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <p>
+        <a href="./13_attribute_selector.html" class="inner_small">link</a>
+        <a href="http://www.naver.com" target="_blank">naver</a>
+        <a href="http://www.daum.net" target="_blank">daum</a>
+        <a href="http://www.google.com" target="_self" class="inner_big">google</a>
+    </p>
+
+    <p>위의 HTML 요소들은 속성 선택자 예시로, 총 4개의 링크가 있다.</p>
+    <p>각각의 링크를 확인해보면, class 속성으로 inner_small과 inner_big이 있고, target 속성이 있는 링크들도 있다. naver와 daum은 새 탭에서 열리도록 설정되어 있고, google은 현재 페이지에서 열리도록 설정되어 있다.</p>
+    <p>이제 우리는 id나 class 이름 없이 특정 속성만을 기준으로 요소를 선택하는 방법을 찾고 있다. 첫 번째 목표는 target 속성이 있는 링크들만 선택하여 밑줄을 없애는 것이다.</p>
+    <p>일반적으로는 class를 사용하여 스타일을 적용하지만, target 속성만으로도 요소를 선택할 수 있다. 이렇게 하면 HTML을 더 간결하게 유지할 수 있다.</p>
+    <hr>
+
+    <p>HTML 코드에서 target 속성이 공통적으로 있는 링크들을 선택하려면, 속성 선택자 대괄호([])를 사용하여 target 속성이 있는 모든 a 태그를 선택할 수 있다. 예를 들어</p>
+    <pre><code>[target] { text-decoration: none; }</code></pre>
+    <p>이렇게 작성하면 target 속성이 있는 naver, daum, google 링크들에만 밑줄이 제거된다.</p>
+    <hr>
+
+    <p>두 번째 목표는 target="_blank"인 링크들에 배경색을 실버로 적용하는 것이다. naver와 daum은 target="_blank" 속성을 가지고 있기 때문에 새 탭에서 열리도록 설정되어 있다. 이 두 링크에 배경색을 실버로 설정하려면 다음과 같이 작성할 수 있다:</p>
+    <pre><code>[target="_blank"] { background: silver; }</code></pre>
+    <p>이렇게 하면 target="_blank" 속성을 가진 링크들만 배경색이 실버로 적용된다.</p>
+    <hr>
+
+    <p>이번에는 class 속성을 기준으로 선택해보자. google과 "link"는 class 속성이 "inner"로 시작한다. 이를 기준으로 글씨를 두껍게 만들고자 할 때, 다음과 같이 작성할 수 있다.</p>
+    <pre><code>[class^="inner"] { font-weight: bold; }</code></pre>
+    <p> CSS에서 ^는 속성 선택자(attribute selector)와 함께 사용되는 특수 문법 중 하나로, 선택하려는 속성 값이 특정 문자열로 시작하는 요소를 선택하는 기능을 제공한다. </p>
+    <p> ^=는 삿갓 또는 circumstack이라고 부르는 특수 기호이며 "시작하는 값"을 의미한다. 즉, 해당 속성의 값이 지정한 문자열로 시작하는 모든 요소를 선택하는 방식이다. </p>
+    <p>이렇게 작성하면 class 속성이 "inner"로 시작하는 모든 요소들의 글씨가 두껍게 설정된다.</p>
+    <hr>
+
+    <p>만약 a 태그를 제외하고 class 속성만을 기준으로 모든 요소를 선택하려면, 아래와 같이 작성할 수 있다:</p>
+    <pre><code>[class^="inner"] { font-weight: bold; }</code></pre>
+    <p>이렇게 하면 class 속성이 "inner"로 시작하는 모든 요소에 대해 글씨가 두껍게 설정된다.</p>
+    <hr>
+
+    <p>속성 선택자에 대한 더 많은 예시는 <a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">w3schools attribute selector</a>에서 확인할 수 있다.</p>
+</body>
+</html>

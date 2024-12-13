@@ -1,0 +1,19 @@
+/* target 속성을 가진 모든 a 태그에 밑줄을 없애는 스타일을 적용 */
+[target] {
+    text-decoration: none;
+}
+
+/* target 속성이 _blank인 a 태그에 배경색을 실버로 적용 */
+[target="_blank"] {
+    background: silver;
+}
+
+/* class 속성이 "inner"로 시작하는 모든 a 태그의 글씨를 두껍게 적용 */
+/* a[class^="inner"] {
+    font-weight: bold;
+} */
+
+/* class 속성이 "inner"로 시작하는 모든 요소들의 글씨를 두껍게 설정 */
+[class^="inner"] {
+    font-weight: bold;
+}
