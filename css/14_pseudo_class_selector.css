@@ -1,0 +1,45 @@
+  /* h1 요소에 마우스를 올렸을 때 배경색을 silver로 변경 */
+h1:hover {
+    background: silver;
+}
+
+/* 링크의 기본 스타일 설정 */
+/* :link는 아직 방문하지 않은 링크를 선택 */
+:link {
+    font-size: 20px;           /* 글꼴 크기를 20px로 설정 */
+    text-decoration: none;     /* 밑줄을 없애기 위해 설정 */
+    font-weight: bold;         /* 글꼴 두께를 굵게 설정 */
+}
+
+/* :visited는 이미 방문한 링크를 선택 */
+:visited {
+    color: green;              /* 방문한 링크는 글씨 색상을 녹색으로 설정 */
+}
+
+/* a 요소에 포커스가 되었을 때 스타일 설정 */
+a:focus {
+    background: blue;         /* 포커스된 링크 배경색을 파란색으로 설정 */
+    color: #fff;               /* 글씨 색상을 흰색으로 설정 */
+}
+
+/* a 요소가 활성화되었을 때 (클릭 상태) 스타일 설정 */
+a:active {
+    background-color: #000;    /* 활성화된 링크 배경을 검정색으로 설정 */
+    color: #f00;               /* 글씨 색상을 빨간색으로 설정 */
+}
+
+/* input과 button 요소에 대한 기본 스타일 설정 */
+input, button {
+    outline: none;             /* 기본 아웃라인을 제거 */
+}
+
+/* input과 button 요소에 포커스가 되었을 때 스타일 설정 */
+input:focus, button:focus {
+    background: green;         /* 포커스된 input과 button 배경을 초록색으로 설정 */
+    color: #fff;               /* 글씨 색상을 흰색으로 설정 */
+}
+
+/* form 요소에 자식 요소 중 하나에 포커스가 있을 때 스타일 변경 */
+form:focus-within {
+    background: silver;        /* 포커스가 있으면 form 배경색을 실버로 설정 */
+}
