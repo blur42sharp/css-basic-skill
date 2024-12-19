@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Selector</title>
+    <link rel="stylesheet" href="../css/15_pseudo_element.css">
+    <style>
+        /* h1 요소의 앞에 하이픈(-)을 추가 */
+        /* h1:before {
+            content: '- '; content 속성으로 하이픈 추가
+            color: blue;   하이픈의 색상은 파란색
+        } */
+
+        /* h1 요소의 뒤에 하이픈(-)을 추가 */
+        /* h1:after {
+            content: ' -'; content 속성으로 하이픈 추가
+            color: blue;   하이픈의 색상은 파란색
+        } */
+
+        /* h2 요소의 앞에 유니코드 문자(화살표 기호)를 추가 */
+        /* h2:before {
+            content: '\2C2'; 유니코드 문자 사용, 화살표 기호를 표시
+        } */
+    </style>
+</head>
+<body>
+    <h1>Pseudo Element Selector</h1>
+    <h2>content</h2>
+    &#706;
+
+    <h1>의사 요소 선택자</h1>
+    <p>
+        의사 요소 선택자(Pseudo Element Selector)는 HTML에는 원래 없지만, CSS를 통해서 요소의 앞이나 뒤에 콘텐츠를 추가할 수 있는 방법이다. 
+        문법은 주로 :before, :after와 같은 선택자를 사용하여 콘텐츠를 추가한다.
+    </p>
+
+    <p>
+        HTML은 기본적으로 시작 태그, 내용, 종료 태그로 구성되어 있다. 예를 들어, <code>&lt;h2&gt;content&lt;/h2&gt;</code>와 같은 구조에서 <code>h2</code> 요소는 시작 태그, <code>content</code>는 내용, <code>&lt;/h2&gt;</code>는 종료 태그이다. 
+        <code>:before</code>와 <code>:after</code>는 이 태그 앞이나 뒤에 내용을 추가하는 역할을 한다.
+    </p>
+
+    <p>
+        <code>h1:before</code>와 <code>h1:after</code>는 <code>h1</code> 요소 앞과 뒤에 각각 콘텐츠를 추가한다. 예를 들어, <code>h1:before</code>에서는 하이픈(-)을 추가하고, <code>color: blue</code>를 사용하여 색상을 설정한다.
+    </p>
+
+    <p>
+        <code>h2:before</code>를 사용하여 유니코드 문자를 콘텐츠로 추가할 수도 있다. 이 경우 유니코드를 사용하여 특수 문자를 표시할 수 있다.
+        예를 들어, <code>\2C2</code>는 유니코드 문자 <code>&#706;</code>에 해당한다. 이렇게 하면 <code>h2</code> 요소의 앞에 화살표 기호를 표시할 수 있다.
+    </p>
+    <hr>
+
+    <h2>유니코드 사이트</h2>
+    <p>
+        유니코드는 문자, 기호, 문장 부호 등을 숫자로 표현한 국제 표준이다. HTML이나 CSS에서는 이 유니코드를 사용하여 웹 페이지에서 다양한 문자를 표현할 수 있다. 
+        예를 들어, <code>&#706;</code>는 유니코드 값 <code>\2C2</code>에 해당하는 문자다. 
+        <a href="https://unicodelookup.com/" target="_blank">유니코드 조회 사이트</a>에서는 다양한 유니코드 문자들을 찾아볼 수 있으며, 원하는 기호나 문자를 쉽게 찾을 수 있다. 이 사이트에서 제공하는 검색 기능을 사용하면, 각 유니코드 문자의 코드와 그에 해당하는 기호를 확인할 수 있다.
+    </p>
+
+    <hr>
+
+    <h2>주의사항</h2>
+    <p>
+        <code>:before</code>와 <code>:after</code>의 <code>content</code> 속성에 설정된 공백은 브라우저에서 한 칸 이상의 공백을 무시하므로, 필요시 공백을 여러 번 추가해도 화면에선 한 칸만 표시된다.
+    </p>
+
+    <p>
+        스타일 시트에서는 유니코드 값을 사용하여 특수 문자를 추가할 수 있으며, HTML에서는 <code>&#706;</code>와 같은 엔티티 코드를 사용한다. 하지만 스타일에서 엔티티 코드가 제대로 적용되지 않기 때문에 유니코드 형태를 사용하는 것이 좋다.
+    </p>
+    <hr>
+
+    <h2>활용 예시</h2>
+    <p>
+        이렇게 CSS의 <code>:before</code>와 <code>:after</code> 선택자를 사용하여 콘텐츠를 추가하고 스타일을 변경할 수 있다. 이 방법은 마우스를 올렸을 때 효과를 주거나, 여러 가지 스타일을 추가하는 데 유용하다.
+    </p>
+</body>
+</html>
