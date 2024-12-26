@@ -1,0 +1,34 @@
+/* 첫 번째, 마지막, 세 번째 자식 요소에 밑줄을 추가하는 선택자 */
+/* li:first-child: 첫 번째 자식 요소를 선택 */
+/* li:last-child: 마지막 자식 요소를 선택 */
+/* li:nth-child(3): 세 번째 자식 요소를 선택 */
+/* text-decoration: underline;을 사용하여 밑줄을 추가 */
+/* li:first-child, 
+    li:last-child,
+    li:nth-child(3) {
+        text-decoration: underline;
+} */
+
+/* 짝수 번째 자식 요소 선택 */
+/* li:nth-child(2n): 2번째, 4번째, 6번째, 8번째 등 짝수 번째 자식 요소들 */
+/* background: silver;로 배경색을 실버로 설정 */
+/* li:nth-child(2n) {
+    background: silver;
+} */
+
+/* 홀수 번째 자식 요소 선택 */
+/* li:nth-child(2n + 1): 1번째, 3번째, 5번째, 7번째 등 홀수 번째 자식 요소들 */
+/* background: blue;로 배경색을 파란색으로 설정 */
+/* li:nth-child(2n + 1) {
+    background: blue;
+} */
+
+/* 짝수 번째 자식 요소에 배경색 실버 적용 */
+li:nth-child(even) {
+    background: silver; /* 짝수 번째 요소들에 배경색 실버를 설정 */
+}
+
+/* 홀수 번째 자식 요소에 배경색 파란색 적용 */
+li:nth-child(odd) {
+    background: blue; /* 홀수 번째 요소들에 배경색 파란색을 설정 */
+}
