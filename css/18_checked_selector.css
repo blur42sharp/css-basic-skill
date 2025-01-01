@@ -1,0 +1,16 @@
+/* :target 선택자는 해당 요소가 타겟을 받았을 때 스타일을 지정 */
+#policy:target {
+    background: green;
+    color: #fff;
+}
+
+/* input이 체크되었을 때 그 바로 뒤에 있는 label의 배경색을 변경 */
+input:checked + label {
+    background-color: silver;
+}
+
+/* disabled 속성이 있는 버튼의 스타일을 수정 */
+button:disabled {
+    background: #999;
+    color: #ebebeb;
+}
