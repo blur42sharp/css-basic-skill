@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Selector</title>
+    <link rel="stylesheet" href="../css/19_not_selector.css">
+    <style>
+        /* 
+            부정 선택자(:not)를 활용하면 특정 요소를 제외하고 다른 요소를 선택할 수 있다. 
+            예를 들어, h2, p, a 태그의 색상을 green으로 변경하고 싶다면, 
+            아래와 같이 h2, p, a { color: green; } 스타일을 사용할 수 있다. 
+            하지만 이 방식은 만약 header 안에 다른 요소가 추가될 때마다 
+            새로 해당 요소를 선택하여 색상을 변경해야 하는 단점이 있다.
+        */
+
+        /* h2, p, a {
+            color: green;
+        } */
+
+        /* 
+            이제 header 안의 모든 자식 요소들에 색상을 적용하려면 universal selector(*)를 사용할 수 있다. 
+            하지만 이렇게 작성하면 header 내 모든 요소, 즉 h1도 포함되어 색상까지 바뀌게 된다.
+            그래서 h1을 제외하고 나머지 요소들의 색상을 바꾸려면 부정 선택자(:not())를 사용해야 한다.
+        */
+
+        /* header * {
+            color: green;
+        } */
+
+        /* 
+            부정 선택자(:not())는 특정 선택자를 제외하고 선택할 수 있게 해준다. 
+            아래 코드에서는 h1을 제외한 header 안의 모든 자식 요소들을 선택하여 색상을 green으로 변경한다.
+            이렇게 작성하면 header 내에 어떤 요소가 추가되더라도 h1을 제외한 나머지 모든 요소에 스타일이 적용된다.
+        */
+        header *:not(h1) {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>부정 선택자</h1>
+    <header>
+        <h1>Logo</h1>
+        <h2>Main Title</h2>
+        <p>Brief Description</p>
+        <a href="">Read More</a>
+    </header>
+    <ul>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+        <li>List Item</li>
+    </ul>
+
+    <p>
+        이제 부정 선택자를 사용하여 h1을 제외한 다른 요소들의 색상을 green으로 변경해보겠다.<br>
+        universal selector(*)를 사용하여 이렇게 <code>header * { color: green; }</code> 적용할 수 있지만, 
+        이렇게 하면 모든 요소가 선택되어 h1까지 색상이 변경된다.<br>
+        만약 h1을 제외하고 나머지 모든 요소의 색상을 바꾸고 싶다면, <code>:not(h1)</code> 부정 선택자를 사용해야 한다.
+    </p>
+    <p>
+        위 코드에서 <code>header *:not(h1) { color: green; }</code>처럼 작성하면, h1을 제외한 header의 모든 자식 요소들이 선택되어 
+        색상이 green으로 바뀌게 된다. 이렇게 하면 header 내에서 다른 요소들이 추가되어도 
+        항상 h1을 제외한 나머지 요소들에 스타일을 적용할 수 있다.
+    </p>
+    <p>
+        부정 선택자는 리스트 항목에서 특정 항목을 제외하고 스타일을 적용할 때도 유용하다.<br>
+        예를 들어, 리스트에서 마지막 항목을 제외하고 나머지 항목들의 배경색을 실버로 변경하려면,<br>
+        아래와 같이 <code>li:not(last-child)</code>를 사용하면 된다.
+    </p>
+    <p>
+        <code>li:not(last-child) { background-color: silver; }</code> 
+        이렇게 작성하면 마지막 <code>li</code> 항목을 제외한 나머지 항목들이 선택되어 배경색이 실버로 바뀌게 된다.<br>
+        이와 같은 방식으로 부정 선택자를 사용하면 특정 항목을 제외한 나머지 항목들을 선택하여 스타일을 지정할 수 있다.
+    </p>
+</body>
+</html>
